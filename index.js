@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 
 app.use("/api/auth", authRoutes);
 
-// ✅ Use the correct environment variable name here
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("MongoDB connected");
